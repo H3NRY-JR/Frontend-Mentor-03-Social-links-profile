@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --grey-900: #141414;
+  --grey-800: #1f1f1f;
+  --grey-700: #333333;
+  --green: #c4f82a;
+
+  --inter-font: "Inter", sans-serif;
+  --text-preset-1: bold 24px/150% var(--inter-font);
+  --text-preset-2: 14px/150% var(--inter-font);
+  --text-preset-2-bold: bold var(--text-preset-2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--grey-900);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
+}
+
+.card {
+  background-color: var(--grey-800);
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  border-radius: 12px;
+}
+
+.card > img {
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+}
+
+.profile-info > h1 {
+  font: var(--text-preset-1);
+  color: white;
+}
+
+.profile-info > h3 {
+  font: var(--text-preset-2-bold);
+  color: var(--green);
+}
+
+.card > p {
+  font: var(--text-preset-2);
+  font-size: 14px;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  font: var(--text-preset-2-bold);
+  color: white;
+  row-gap: 16px;
+}
+
+.link-button {
+  background-color: var(--grey-700);
+  height: 45px;
+  align-content: center;
+  border-radius: 8px;
+}
+
+.link-button:hover {
+  background-color: var(--green);
+  cursor: pointer;
+}
+
+@media (max-width: 320px) {
+  .link-button {
+    width: 250px;
+  }
+}
+
+@media (min-width: 321px) {
+  .link-button {
+    width: 279px;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .card {
+    max-width: 327px;
+    max-height: 579px;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 384px;
+    max-height: 611px;
+    padding: 40px;
+  }
+}
